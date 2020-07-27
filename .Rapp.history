@@ -1,0 +1,3 @@
+library(recommenderlab)
+setwd("/Users/juanicolombo/Desktop/tp-TDL-master/MovieRecomendationSystem")
+getwd()

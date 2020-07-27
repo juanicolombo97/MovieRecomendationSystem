@@ -25,10 +25,12 @@ pidoInput <- function(){
     my.movieWatched <- readline(prompt="Viste la pelicula ? [1: Si, 2: No]: ")
     my.movieWatched <- suppressWarnings(as.integer(my.movieWatched))
     if(my.movieWatched == 1){
-      contador = contador + 1
       my.ratingMovie <- readline(prompt="Puntea la pelicula 1-5: ")
       my.ratingMovie <- as.integer(my.ratingMovie)
-      rating_data <<- rbind(rating_data, list(newUserID, randomMovieId, my.ratingMovie, 0))
+      if(my.ratingMovie >= 1 && my.ratingMovie <= 5){
+        contador = contador + 1
+        rating_data <<- rbind(rating_data, list(newUserID, randomMovieId, my.ratingMovie, 0))
+      }
     }
   }
   
